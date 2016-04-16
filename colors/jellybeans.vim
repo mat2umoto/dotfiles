@@ -385,10 +385,10 @@ endif
 call s:X("Visual","","404040","","",s:termBlack)
 call s:X("Cursor",s:background_color,"b0d0f0","","","")
 
-call s:X("LineNr","605958",s:background_color,"none",s:termBlack,"")
+call s:X("LineNr","BBBBBB",s:background_color,"none",s:termBlack,"")
 call s:X("CursorLineNr","ccc5c4","","none","White","")
-call s:X("Comment","888888","","italic","Grey","")
-call s:X("Todo","c7c7c7","","bold","White",s:termBlack)
+call s:X("Comment","888888","","","Grey","")
+call s:X("Todo","FF4040","","bold","White",s:termBlack)
 
 call s:X("StatusLine","000000","dddddd","italic","","White")
 call s:X("StatusLineNC","ffffff","403c41","italic","White","Black")
