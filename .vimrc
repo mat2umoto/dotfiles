@@ -15,11 +15,12 @@ set autoread    "ファイル内容が変更されると自動読み込みする
   
   
 "Backup
-set backupdir=$VIM/backup    "バックアップディレクトリを指定する
-set browsedir=buffer    "ファイル保存ダイアログの初期ディレクトリをバッファファイル位置に設定
-set directory=$VIM/backup,c:\temp    "スワップファイルディレクトリを指定する
-set history=1000    "履歴保存数
-  
+if has('win32')
+	set backupdir=$VIM/backup    "バックアップディレクトリを指定する
+	set browsedir=buffer    "ファイル保存ダイアログの初期ディレクトリをバッファファイル位置に設定
+	set directory=$VIM/backup,c:\temp    "スワップファイルディレクトリを指定する
+	set history=1000    "履歴保存数
+endif  
   
 "Search
 set incsearch    "インクリメンタルサーチを行う
