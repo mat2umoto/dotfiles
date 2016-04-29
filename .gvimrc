@@ -12,9 +12,12 @@ set matchtime=3 "showmatchの表示時間
 
 set laststatus=2    "ステータスラインを常に表示する
 
-set guifont=Myrica_M:h11    "半角文字の設定
-set guifontwide=Myrica_M:h11    "全角文字の設定
+if has('win32')
+	set guifont=Myrica_M:h11    "半角文字の設定
+	set guifontwide=Myrica_M:h11    "全角文字の設定
+endif
 
 set lines=40    " 縦幅　デフォルトは24
 set columns=120    " 横幅　デフォルトは80
+
 
