@@ -1,11 +1,11 @@
 #!/bin/sh
 
 # vim設定ファイルのシンボリックリンク 相対パスだとうまくいかないので停止
-#ln -fs ./.vimrc ~
-#ln -fs ./.gvimrc ~
+#ln -fs $(readlink -f ./.vimrc) ~
+#ln -fs $(readlink -f ./.gvimrc) ~
 #mkdir ~/.vim
 #mkdir ~/.vim/colors
-#ln -fs ./colors/jellybeans.vim ~/.vim/colors
+#ln -fs $(readlink -f ./colors/jellybeans.vim) ~/.vim/colors
 
 # とりあえずコピー
 cp ./.vimrc ~
