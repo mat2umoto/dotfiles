@@ -73,8 +73,17 @@ augroup ColorSchemeHook
 augroup END
 
 " ノーマルモードに戻る際にIMEをOFF
-augroup InsModeAu
-    autocmd!
-    autocmd InsertEnter,CmdwinEnter * set noimdisable
-    autocmd InsertLeave,CmdwinLeave * set imdisable
-augroup END
+if has('win32')
+	augroup InsModeAu
+		autocmd!
+		autocmd InsertEnter,CmdwinEnter * set noimdisable
+		autocmd InsertLeave,CmdwinLeave * set imdisable
+	augroup END
+endif
+if has('unix')
+	function! ImInActivate()
+		call system('fcitx-remote -c')
+	endfunction
+	inoremap <silent> <C-[> <ESC>:call ImInActivate()<CR>
+endif
+
