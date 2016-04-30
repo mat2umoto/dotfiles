@@ -17,11 +17,11 @@ if has('win32')
 	set guifontwide=Myrica_M:h11	"全角文字の設定
 endif
 if has('unix')
-	set guifont=Monospace\ 12		"半角文字の設定
-	set guifontwide=Monospace\ 12	"全角文字の設定
+	set guifont=Ricty\ Diminished\ Discord\ 12		"半角文字の設定
+	set guifontwide=Ricty\ Diminished\ Discord\ 12	"全角文字の設定
 endif
 
-set lines=40    " 縦幅　デフォルトは24
-set columns=120    " 横幅　デフォルトは80
+set lines=50   " 縦幅　デフォルトは24
+set columns=140    " 横幅　デフォルトは80
 
 
