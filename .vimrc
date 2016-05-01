@@ -87,3 +87,71 @@ endif
 set iminsert=0
 set imsearch=-1	" 検索モード時も合わせる
 
+
+
+
+
+
+
+
+
+" =========================== NeoBundle ===========================
+
+" Note: Skip initialization for vim-tiny or vim-small.
+if 0 | endif
+
+filetype off
+
+if has('vim_starting')
+  if &compatible
+    set nocompatible               " Be iMproved
+  endif
+
+  if has('win32')
+    set runtimepath+=~/vimfiles/bundle/neobundle.vim
+  endif
+  if has('unix')
+    set runtimepath+=~/.vim/bundle/neobundle.vim
+  endif
+endif
+
+if has('win32')
+  call neobundle#begin(expand('~/vimfiles/bundle/'))
+endif
+if has('unix')
+  call neobundle#begin(expand('~/.vim/bundle/'))
+endif
+
+" originalrepos on github
+NeoBundle 'Shougo/neobundle.vim'
+NeoBundle 'Shougo/vimproc', {
+  \ 'build' : {
+    \ 'windows' : 'make -f make_mingw32.mak',
+    \ 'cygwin' : 'make -f make_cygwin.mak',
+    \ 'mac' : 'make -f make_mac.mak',
+    \ 'unix' : 'make -f make_unix.mak',
+  \ },
+  \ }
+NeoBundle 'VimClojure'
+NeoBundle 'Shougo/vimshell'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/neosnippet'
+NeoBundle 'jpalardy/vim-slime'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'Shougo/vimfiler.vim'
+NeoBundle 'itchyny/lightline.vim'
+NeoBundle 't9md/vim-textmanip'
+
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'ujihisa/unite-colorscheme'
+"NeoBundle 'nanotech/jellybeans.vim'	" 色設定を少し手直ししたいのでcolorフォルダで別途管理中
+""NeoBundle 'https://bitbucket.org/kovisoft/slimv'
+
+call neobundle#end()
+
+filetype plugin indent on     " required!
+filetype indent on
+syntax on
+
+NeoBundleCheck
