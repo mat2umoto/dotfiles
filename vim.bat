@@ -8,5 +8,6 @@ rem vim設定ファイルのシンボリックリンク
 mklink %USERPROFILE%\.vimrc %curpath%.vimrc
 mklink %USERPROFILE%\.gvimrc %curpath%.gvimrc
 mkdir %USERPROFILE%\vimfiles
-mklink /d %USERPROFILE%\vimfiles\colors %curpath%colors
+rem mklink /d %USERPROFILE%\vimfiles\colors %curpath%colors
+mklink /d %USERPROFILE%\vimfiles\bundle %curpath%bundle
 pause
