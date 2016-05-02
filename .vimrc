@@ -136,7 +136,7 @@ NeoBundle 'VimClojure'
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neocomplcache'
-NeoBundle 'Shougo/neosnippet'
+"NeoBundle 'Shougo/neosnippet'
 NeoBundle 'jpalardy/vim-slime'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Shougo/vimfiler.vim'
@@ -147,6 +147,13 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'ujihisa/unite-colorscheme'
 "NeoBundle 'nanotech/jellybeans.vim'	" 色設定を少し手直ししたいのでcolorフォルダで別途管理中
 ""NeoBundle 'https://bitbucket.org/kovisoft/slimv'
+
+" markdownプレビュー
+NeoBundle 'plasticboy/vim-markdown'
+NeoBundle 'kannokanno/previm'
+NeoBundle 'tyru/open-browser.vim'
+au BufRead,BufNewFile *.md set filetype=markdown
+let g:previm_open_cmd = 'open -a Firefox'
 
 call neobundle#end()
 
