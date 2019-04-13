@@ -12,4 +12,7 @@ cp ./.vimrc ~
 cp ./.gvimrc ~
 mkdir ~/.vim
 mkdir ~/.vim/colors
-cp ./colors/jellybeans.vim ~/.vim/colors
+cp ./colors/* ~/.vim/colors
+mkdir ~/.vim/bundle
+mkdir ~/.vim/bundle\neobundle.vim
+git clone https://github.com/Shougo/neobundle.vim.git ~/.vim/bundle\neobundle.vim
