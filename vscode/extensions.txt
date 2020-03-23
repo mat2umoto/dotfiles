@@ -1,0 +1,12 @@
+AlanWalk.markdown-toc
+bierner.github-markdown-preview
+bierner.markdown-preview-github-styles
+gerane.Theme-Jellybeams
+gerane.Theme-Twilight
+hnw.vscode-auto-open-markdown-preview
+MS-CEINTL.vscode-language-pack-ja
+ms-python.python
+rokoroku.vscode-theme-darcula
+taichi.vscode-textlint
+yzane.markdown-pdf
+yzhang.markdown-all-in-one

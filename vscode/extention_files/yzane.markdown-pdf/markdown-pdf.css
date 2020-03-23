@@ -1,0 +1,149 @@
+
+/**********/
+/* ヘッダ */
+/**********/
+/* ヘッダを非表示にしたためいったん廃止 */
+/*
+head {
+	font-family: 'Meiryo';
+}
+*/
+
+/************/
+/* 文書全体 */
+/************/
+body {
+	font-family: 'Meiryo';				/* 基本フォント */
+}
+
+/******************/
+/* コードブロック */
+/******************/
+body code {
+	font-family: 'Myrica M';			/* 等幅フォント */
+	/*background-color: #E8E8E8;*/			/* 背景色：薄灰 */
+	/*color: black;*/						/* 文字色：黒  ※これがあるとダークテーマでも黒字になってしまうので削除した */
+}
+
+/********************/
+/* インラインコード */
+/********************/
+:not(pre):not(.hljs) > code {
+	font-family: 'Myrica M';			/* 等幅フォント */
+	/*border: solid 1px #E8E8E8;*/
+	background-color: #E8E8E8;			/* 背景色：薄灰 */
+	color: black;						/* 文字色：黒  ※これが無いと橙色になるので必須 */
+}
+
+/****************/
+/* 引用ブロック */
+/****************/
+blockquote {
+	border-color: #808080;				/* 境界線（灰） */
+}
+
+/************/
+/* 見出し１ */
+/************/
+h1 {
+	padding: 0.3em;
+	line-height: 1.2;
+	border-bottom: solid 2px black;		/* 下線（太線） */
+	font-weight: bold;
+}
+
+/************/
+/* 見出し２ */
+/************/
+h2 {
+	padding: 0.3em;
+	line-height: 1.2;
+	border-bottom: solid 1px #808080;	/* 下線（灰） */
+	font-weight: bold;
+}
+
+/************/
+/* 見出し３ */
+/************/
+h3 {
+	padding: 0.3em;
+	line-height: 1.2;
+	font-weight: bold;
+	background: transparent;			/* 背景透明 */
+	border-left: solid 4px #808080;		/* 左線（灰） */
+}
+
+/****************/
+/* 見出し４～５ */
+/****************/
+h4, h5 {
+	padding: 0.3em;
+	line-height: 1.2;
+	border-bottom: solid 1px #808080;	/* 下線（灰） */
+	font-weight: bold;					/* 太字 */
+}
+
+/************/
+/* 見出し６ */
+/************/
+h6 {
+	padding: 0.3em;
+	line-height: 1.2;
+	font-weight: bold;					/* 太字 */
+}
+
+/************/
+/* テーブル */
+/************/
+table {
+	border-collapse: collapse;			/* 罫線の隙間なし */
+	margin: 0 0 20px 0;					/* 下側マージンを20px */
+	page-break-inside: avoid;			/* 途中の改ページを抑制 */
+}
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	border: solid 1px black;			/* 罫線あり */
+	padding: 2px 6px;					/* セル内の余白（上下,左右） */
+}
+tr:nth-child(even) {
+	background: #F4F4F4;				/* 偶数行の背景色：白に近い灰 */
+}
+table th {
+	vertical-align: top;
+	background: #3F3F3F;				/* ヘッダ行の背景色：黒に近い灰 */
+	color: #FFFFFF;						/* 文字色：白 */
+}
+
+/**********/
+/* 水平線 */
+/**********/
+hr {
+	border-bottom: solid 1px black;		/* 1pxの線 */
+}
+
+/**********/
+/* リスト */
+/**********/
+/* 番号付きリストに親子番号(2-1-3.など)を出力するようにしたが、通常のリストと組み合わせると煩雑になるので一旦廃止 */
+/*
+ol {
+    counter-reset: section;
+}
+ol>li {
+    list-style: none;
+}
+ol>li:before {
+    content : counters(section, '-') '. ';
+    counter-increment : section;
+}
+*/
+
+/********/
+/* 画像 */
+/********/
+img {
+	vertical-align: middle;				/* 上下中央配置（行内に画像配置したとき用） */
+}
+

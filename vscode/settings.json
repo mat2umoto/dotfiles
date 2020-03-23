@@ -1,0 +1,20 @@
+{
+    "workbench.colorTheme": "Jellybeams",
+    "breadcrumbs.enabled": true,
+    "markdown-pdf.scale": 0.8,
+    "markdown-pdf.highlightStyle": "darcula.css",
+    "markdown-pdf.styles": [
+        "C:\\Tools\\_setting\\vscode\\yzane.markdown-pdf\\markdown-pdf.css"
+    ],
+    "markdown-pdf.headerTemplate": "<div></div>",
+    "files.eol": "\r\n",
+    "markdown-toc.depthTo": 4,
+    "markdown-toc.depthFrom": 2,
+    "markdown-toc.updateOnSave": false,
+    "editor.fontFamily": "'Myrica M', Consolas, 'Courier New', monospace",
+    "editor.fontSize": 15,
+    "editor.minimap.enabled": true,
+    "markdown-pdf.executablePath": "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
+    "textlint.configPath": "%appdata%\\Code\\User\\mat2umoto.extentionFiles\\taichi.vscode-textlint\\.textlintrc",
+    "textlint.nodePath": "C:\\Tools\\_setting\\vscode\\taichi.vscode-textlint\\node_modules"
+}
