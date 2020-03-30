@@ -3,6 +3,15 @@
 rem ユーザーディレクトリへ移動
 rem cd %userprofile%
 
+rem 管理者権限で起動した場合のカレントディレクトリ設定
+cd %~dp0
+
+rem textlint本体をカレントへインストール
+echo ****************************************************
+echo initialize Node.js project
+echo ****************************************************
+call npm init --yes
+
 rem textlint本体をカレントへインストール
 echo ****************************************************
 echo install textlint

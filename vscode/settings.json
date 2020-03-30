@@ -4,7 +4,7 @@
     "markdown-pdf.scale": 0.8,
     "markdown-pdf.highlightStyle": "darcula.css",
     "markdown-pdf.styles": [
-        "C:\\Tools\\_setting\\vscode\\yzane.markdown-pdf\\markdown-pdf.css"
+        "C:\\tools\\_setting\\vscode\\yzane.markdown-pdf\\markdown-pdf.css"
     ],
     "markdown-pdf.headerTemplate": "<div></div>",
     "files.eol": "\r\n",
@@ -15,6 +15,6 @@
     "editor.fontSize": 15,
     "editor.minimap.enabled": true,
     "markdown-pdf.executablePath": "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
-    "textlint.configPath": "%appdata%\\Code\\User\\mat2umoto.extentionFiles\\taichi.vscode-textlint\\.textlintrc",
-    "textlint.nodePath": "C:\\Tools\\_setting\\vscode\\taichi.vscode-textlint\\node_modules"
+    "textlint.configPath": "C:\\tools\\_setting\\vscode\\taichi.vscode-textlint\\.textlintrc",
+    "textlint.nodePath": "C:\\tools\\_setting\\vscode\\taichi.vscode-textlint\\node_modules"
 }
