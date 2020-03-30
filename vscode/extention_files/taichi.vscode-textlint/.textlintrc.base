@@ -1,29 +1,60 @@
 {
-	"filters": {},
+	"filters": {
+		// ホワイトリスト除外設定
+		"whitelist": {
+			// 許可
+			"allow": [
+				"C言語"
+			]
+		}
+	},
 	"rules": {
 		// 技術文書向けの textlint ルールプリセット
-		//"preset-ja-technical-writing": true,
 		"preset-ja-technical-writing": {
-			 "no-exclamation-question-mark": {
-					"allowHalfWidthExclamation": false,		// 感嘆符 半角!  の使用可否
-					"allowFullWidthExclamation": true,		// 感嘆符 全角！ の使用可否
-					"allowHalfWidthQuestion": false,		// 感嘆符 半角?  の使用可否
-					"allowFullWidthQuestion": true			// 感嘆符 全角？ の使用可否
-			 },
+			// 感嘆符の使用可否
+			"no-exclamation-question-mark": {
+				// 半角!
+				"allowHalfWidthExclamation": true,
+				// 全角！
+				"allowFullWidthExclamation": true,
+				// 半角? 
+				"allowHalfWidthQuestion": true,
+				// 全角？
+				"allowFullWidthQuestion": true
+			},
+			// 文の長さ
+			"sentence-length": {
+				// 文字数上限
+				"max": 150,
+				// 除外する文字列の正規表現パターン
+				exclusionPatterns: []
+			}
 		},
 		// 日本語周りにおけるスペースの有無 ルールプリセット
-		//"preset-ja-spacing": true
 		"preset-ja-spacing": {
-			"ja-nakaguro-or-halfwidth-space-between-katakana": true,	// カタカナ語間は、中黒または半角スペースで区切る
-			"ja-no-space-around-parentheses": true,						// かっこの外側、内側ともにスペースを入れない
-			"ja-no-space-between-full-width": true,						// 全角文字どうしの間にスペースを入れない
-			"ja-space-between-half-and-full-width": {					// 半角文字と全角文字の間にスペースを入れるかどうか(never/always)
-				//"space": "never"
-				"space": "always"
+			// カタカナ語間は、中黒または半角スペースで区切る
+			"ja-nakaguro-or-halfwidth-space-between-katakana": true,
+			// かっこの外側、内側ともにスペースを入れない
+			"ja-no-space-around-parentheses": true,
+			// 全角文字どうしの間にスペースを入れない
+			"ja-no-space-between-full-width": true,
+			// 半角文字と全角文字の間にスペースを入れるかどうか
+			"ja-space-between-half-and-full-width": {
+				// space: never/always
+				//   VS Code の markdown-pdf ではスペースあり、Re:VIEW を使用したPDF作成はスペースなしとする
+				"space": "always",
+				// 句読点の隣は例外扱いとするかどうか
+				"exceptPunctuation": true
 			},
-			"ja-space-after-exclamation": true,							// 文末感嘆符の直後が別文なら全角スペースを入れる
-			"ja-space-after-question": true,							// 文末疑問符の直後が別文なら全角スペースを入れる
-			"ja-space-around-code": true,								// インラインコードの前後に半角スペースを入れる
+			// 文末感嘆符の直後が別文なら全角スペースを入れる
+			"ja-space-after-exclamation": true,
+			// 文末疑問符の直後が別文なら全角スペースを入れる
+			"ja-space-after-question": true,
+			// インラインコードの前後に半角スペースを入れる
+			"ja-space-around-code": {
+				"before": true,
+				"after": true
+			}
 		}
 	},
 }
